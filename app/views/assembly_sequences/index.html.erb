@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Assembly Sequences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Car</th>
+      <th>Part</th>
+      <th>Sequence</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assembly_sequences.each do |assembly_sequence| %>
+      <tr>
+        <td><%= assembly_sequence.car %></td>
+        <td><%= assembly_sequence.part %></td>
+        <td><%= assembly_sequence.sequence %></td>
+        <td><%= link_to 'Show', assembly_sequence %></td>
+        <td><%= link_to 'Edit', edit_assembly_sequence_path(assembly_sequence) %></td>
+        <td><%= link_to 'Destroy', assembly_sequence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assembly sequence', new_assembly_sequence_path %>

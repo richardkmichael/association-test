@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @assembly_sequence.car %>
+</p>
+
+<p>
+  <strong>Part:</strong>
+  <%= @assembly_sequence.part %>
+</p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @assembly_sequence.sequence %>
+</p>
+
+<%= link_to 'Edit', edit_assembly_sequence_path(@assembly_sequence) %> |
+<%= link_to 'Back', assembly_sequences_path %>
